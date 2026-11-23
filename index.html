@@ -1,0 +1,55 @@
+
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <title>KeyShift — Key Transition Assistant</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div class="logo">♫</div>
+      <div>
+        <h1>KeyShift</h1>
+        <p>Find your way between keys.</p>
+      </div>
+    </header>
+
+    <section class="panel">
+      <h2>Build a transition</h2>
+      <div class="selectors">
+        <label>Starting key
+          <select id="fromKey"></select>
+        </label>
+        <div class="arrow">→</div>
+        <label>Destination key
+          <select id="toKey"></select>
+        </label>
+      </div>
+
+      <label>Transition style
+        <select id="style">
+          <option value="smooth">Smooth / Common Chord</option>
+          <option value="dominant">Strong / Dominant</option>
+          <option value="chromatic">Chromatic</option>
+          <option value="simple">Simple / Direct</option>
+        </select>
+      </label>
+
+      <button id="generate">Find Progressions</button>
+    </section>
+
+    <section id="results" class="results" aria-live="polite">
+      <p class="placeholder">Choose two keys to get started.</p>
+    </section>
+
+    <footer>KEYSHIFT · A musician's transition tool</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
